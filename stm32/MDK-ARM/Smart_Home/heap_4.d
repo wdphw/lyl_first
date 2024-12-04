@@ -1,0 +1,14 @@
+smart_home\heap_4.o: ..\FreeRTOS\Portable\MemMang\heap_4.c
+smart_home\heap_4.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdlib.h
+smart_home\heap_4.o: D:\keil5\ARM\ARMCC\Bin\..\include\string.h
+smart_home\heap_4.o: ../FreeRTOS/include/FreeRTOS.h
+smart_home\heap_4.o: D:\keil5\ARM\ARMCC\Bin\..\include\stddef.h
+smart_home\heap_4.o: D:\keil5\ARM\ARMCC\Bin\..\include\stdint.h
+smart_home\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+smart_home\heap_4.o: ../FreeRTOS/include/projdefs.h
+smart_home\heap_4.o: ../FreeRTOS/include/portable.h
+smart_home\heap_4.o: ../FreeRTOS/include/deprecated_definitions.h
+smart_home\heap_4.o: ../FreeRTOS/Portable/RVDS/ARM_CM3/portmacro.h
+smart_home\heap_4.o: ../FreeRTOS/include/mpu_wrappers.h
+smart_home\heap_4.o: ../FreeRTOS/include/task.h
+smart_home\heap_4.o: ../FreeRTOS/include/list.h

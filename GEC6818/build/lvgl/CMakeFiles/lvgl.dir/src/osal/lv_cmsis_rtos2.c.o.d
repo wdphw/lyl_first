@@ -1,0 +1,19 @@
+lvgl/CMakeFiles/lvgl.dir/src/osal/lv_cmsis_rtos2.c.o: \
+ /mnt/hgfs/lv_v9.0/lvgl/src/osal/lv_cmsis_rtos2.c \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
+ /mnt/hgfs/lv_v9.0/lvgl/src/osal/lv_os.h \
+ /mnt/hgfs/lv_v9.0/lvgl/src/osal/../lv_conf_internal.h \
+ /mnt/hgfs/lv_v9.0/lvgl/src/osal/../lv_conf_kconfig.h \
+ /mnt/hgfs/lv_v9.0/lv_conf.h \
+ /mnt/hgfs/lv_v9.0/lvgl/src/osal/../misc/lv_types.h \
+ /mnt/hgfs/lv_v9.0/lvgl/src/osal/../misc/../lv_conf_internal.h \
+ /usr/local/5.4.0/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stdint.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/stdint.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/wordsize.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/wchar.h \
+ /usr/local/5.4.0/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
+ /mnt/hgfs/lv_v9.0/lvgl/src/osal/lv_os_none.h

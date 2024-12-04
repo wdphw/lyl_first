@@ -1,0 +1,769 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.10.1.4655 for 8051               18/Nov/2024  01:44:41
+# Copyright 2004-2017 IAR Systems AB.
+# Standalone license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\DHT11.C
+#    Command line       =  
+#        -f C:\Users\lyl\AppData\Local\Temp\EW5698.tmp
+#        (C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\DHT11.C
+#        -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC
+#        -D LCD_SUPPORTED=DEBUG -D HAL_UART=TRUE -D INT_HEAP_LEN=2048 -lC
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\List
+#        -lA
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\List
+#        --diag_suppress Pe001,Pa010 -o
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\Obj
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 16 -f
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+#        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0x1345
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+#        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+#        -DREJOIN_POLL_RATE=440) -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\Source\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        -Ohz --require_prototypes --no_code_motion)
+#    Locale             =  Chinese (Simplified)_China.936
+#    List file          =  
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\List\DHT11.lst
+#    Object file        =  
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\Obj\DHT11.r51
+#
+###############################################################################
+
+C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\DHT11.C
+      1          #include <ioCC2530.h>
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+      2          #include <stdio.h>
+      3          #include <stdint.h>
+      4          #include "dht11.h"
+      5          //typedef unsigned char           uint8_t;
+      6          #define u32 unsigned int 
+      7          
+      8          #define DHT11 P0_4
+      9          
+     10          void delayUs(u32 n);
+     11          void delayMs(u32 n);
+     12          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     13          void delayUs(u32 n) 
+   \                     delayUs:
+     14          { 
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+   \   000000   8003         SJMP      ??delayUs_0
+     15            while(n--)   
+     16            { 
+     17              asm("NOP"); 
+   \                     ??delayUs_1:
+   \   000002   00           NOP
+     18              asm("NOP");	
+   \   000003   00           NOP
+     19              asm("NOP"); 
+   \   000004   00           NOP
+     20            } 
+   \                     ??delayUs_0:
+   \   000005   EA           MOV       A,R2
+   \   000006   F8           MOV       R0,A
+   \   000007   EB           MOV       A,R3
+   \   000008   F9           MOV       R1,A
+   \   000009   E8           MOV       A,R0
+   \   00000A   24FF         ADD       A,#-0x1
+   \   00000C   1A           DEC       R2
+   \   00000D   E9           MOV       A,R1
+   \   00000E   34FF         ADDC      A,#-0x1
+   \   000010   FB           MOV       R3,A
+   \   000011   E8           MOV       A,R0
+   \   000012   49           ORL       A,R1
+   \   000013   70ED         JNZ       ??delayUs_1
+     21          } 
+   \   000015   02....       LJMP      ?BRET
+     22           
+     23          //毫秒级延时 
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     24          void delayMs(u32 n) 
+   \                     delayMs:
+     25          { 
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+   \   000005   EA           MOV       A,R2
+   \   000006   FE           MOV       R6,A
+   \   000007   EB           MOV       A,R3
+   \   000008   FF           MOV       R7,A
+   \   000009   8007         SJMP      ??delayMs_0
+     26            while(n--) 
+     27            { 
+     28                delayUs(1000); 
+   \                     ??delayMs_1:
+   \   00000B                ; Setup parameters for call to function delayUs
+   \   00000B   7AE8         MOV       R2,#-0x18
+   \   00000D   7B03         MOV       R3,#0x3
+   \   00000F   12....       LCALL     `??delayUs::?relay`; Banked call to: delayUs
+     29            } 
+   \                     ??delayMs_0:
+   \   000012   EE           MOV       A,R6
+   \   000013   F8           MOV       R0,A
+   \   000014   EF           MOV       A,R7
+   \   000015   F9           MOV       R1,A
+   \   000016   E8           MOV       A,R0
+   \   000017   24FF         ADD       A,#-0x1
+   \   000019   1E           DEC       R6
+   \   00001A   E9           MOV       A,R1
+   \   00001B   34FF         ADDC      A,#-0x1
+   \   00001D   FF           MOV       R7,A
+   \   00001E   E8           MOV       A,R0
+   \   00001F   49           ORL       A,R1
+   \   000020   70E9         JNZ       ??delayMs_1
+     30          }
+   \   000022                REQUIRE ?Subroutine0
+   \   000022                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   7F01         MOV       R7,#0x1
+   \   000002   02....       LJMP      ?BANKED_LEAVE_XDATA
+     31          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     32          void GPIO_OUT_Init(void){
+   \                     GPIO_OUT_Init:
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     33            P0SEL &=~(1<<4);
+   \   000000   53F3EF       ANL       0xf3,#0xef
+     34            P0DIR |= (1<<4);
+   \   000003   43FD10       ORL       0xfd,#0x10
+     35            DHT11 = 1;
+   \   000006   D284         SETB      0x80.4
+     36          }
+   \   000008   02....       LJMP      ?BRET
+   \   00000B                REQUIRE P0SEL
+   \   00000B                REQUIRE P0DIR
+   \   00000B                REQUIRE _A_P0
+     37          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     38          void GPIO_IN_Init(void){
+   \                     GPIO_IN_Init:
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     39             P0SEL &=~(1<<4);
+   \   000000   53F3EF       ANL       0xf3,#0xef
+     40             P0DIR &=~(1<<4);
+   \   000003   53FDEF       ANL       0xfd,#0xef
+     41          }
+   \   000006   02....       LJMP      ?BRET
+   \   000009                REQUIRE P0SEL
+   \   000009                REQUIRE P0DIR
+     42          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     43          void dht11_start(){
+   \                     dht11_start:
+   \   000000   C082         PUSH      DPL
+   \   000002   C083         PUSH      DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     44            GPIO_OUT_Init();
+   \   000004                ; Setup parameters for call to function GPIO_OUT_Init
+   \   000004   12....       LCALL     `??GPIO_OUT_Init::?relay`; Banked call to: GPIO_OUT_Init
+     45            DHT11=0;
+   \   000007   C284         CLR       0x80.4
+     46            delayMs(20);
+   \   000009                ; Setup parameters for call to function delayMs
+   \   000009   7A14         MOV       R2,#0x14
+   \   00000B   7B00         MOV       R3,#0x0
+   \   00000D   12....       LCALL     `??delayMs::?relay`; Banked call to: delayMs
+     47            DHT11=1;
+   \   000010   D284         SETB      0x80.4
+     48            delayUs(30);
+   \   000012                ; Setup parameters for call to function delayUs
+   \   000012   7A1E         MOV       R2,#0x1e
+   \   000014   7B00         MOV       R3,#0x0
+   \   000016   12....       LCALL     `??delayUs::?relay`; Banked call to: delayUs
+     49          
+     50            
+     51          }
+   \   000019   D083         POP       DPH
+   \   00001B   D082         POP       DPL
+   \   00001D   02....       LJMP      ?BRET
+   \   000020                REQUIRE _A_P0
+     52          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     53          int dht11_check(){
+   \                     dht11_check:
+   \   000000   74F7         MOV       A,#-0x9
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 9
+   \   000005                ; Auto size: 0
+     54            uint8_t retry=0;
+   \   000005   7E00         MOV       R6,#0x0
+     55            GPIO_IN_Init();
+   \   000007                ; Setup parameters for call to function GPIO_IN_Init
+   \   000007   12....       LCALL     `??GPIO_IN_Init::?relay`; Banked call to: GPIO_IN_Init
+   \   00000A   8008         SJMP      ??dht11_check_0
+     56          	
+     57            while((DHT11==0)&& retry<100){ 
+     58          		retry++;
+   \                     ??dht11_check_1:
+   \   00000C   0E           INC       R6
+     59                          delayUs(1);
+   \   00000D                ; Setup parameters for call to function delayUs
+   \   00000D   7A01         MOV       R2,#0x1
+   \   00000F   7B00         MOV       R3,#0x0
+   \   000011   12....       LCALL     `??delayUs::?relay`; Banked call to: delayUs
+     60          	}
+   \                     ??dht11_check_0:
+   \   000014   A284         MOV       C,0x80.4
+   \   000016   4006         JC        ??dht11_check_2
+   \   000018   EE           MOV       A,R6
+   \   000019   C3           CLR       C
+   \   00001A   9464         SUBB      A,#0x64
+   \   00001C   40EE         JC        ??dht11_check_1
+     61          	if(retry>=100)return 1; 	
+   \                     ??dht11_check_2:
+   \   00001E   EE           MOV       A,R6
+   \   00001F   C3           CLR       C
+   \   000020   9464         SUBB      A,#0x64
+   \   000022   501C         JNC       ??dht11_check_3
+     62          	else retry=0;
+   \   000024   7E00         MOV       R6,#0x0
+   \   000026   8008         SJMP      ??dht11_check_4
+     63          
+     64            
+     65            while ((DHT11==1) && retry<100) {  
+     66                  retry++;
+   \                     ??dht11_check_5:
+   \   000028   0E           INC       R6
+     67                  delayUs(1);
+   \   000029                ; Setup parameters for call to function delayUs
+   \   000029   7A01         MOV       R2,#0x1
+   \   00002B   7B00         MOV       R3,#0x0
+   \   00002D   12....       LCALL     `??delayUs::?relay`; Banked call to: delayUs
+     68              }	    
+   \                     ??dht11_check_4:
+   \   000030   A284         MOV       C,0x80.4
+   \   000032   5006         JNC       ??dht11_check_6
+   \   000034   EE           MOV       A,R6
+   \   000035   C3           CLR       C
+   \   000036   9464         SUBB      A,#0x64
+   \   000038   40EE         JC        ??dht11_check_5
+     69              if(retry>=100)return 1;	    
+   \                     ??dht11_check_6:
+   \   00003A   EE           MOV       A,R6
+   \   00003B   C3           CLR       C
+   \   00003C   9464         SUBB      A,#0x64
+   \   00003E   4004         JC        ??dht11_check_7
+   \                     ??dht11_check_3:
+   \   000040   7A01         MOV       R2,#0x1
+   \   000042   8002         SJMP      ??dht11_check_8
+     70              return 0;
+   \                     ??dht11_check_7:
+   \   000044   7A00         MOV       R2,#0x0
+   \                     ??dht11_check_8:
+   \   000046   7B00         MOV       R3,#0x0
+   \   000048   02....       LJMP      ?Subroutine0 & 0xFFFF
+   \   00004B                REQUIRE _A_P0
+     71          
+     72          }
+     73          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     74          uint8_t Dht11_ReceOneByte (void)
+   \                     Dht11_ReceOneByte:
+     75          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000   74F4         MOV       A,#-0xc
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 12
+   \   000005                ; Auto size: 0
+     76              uint8_t tempVar = 0;   
+   \   000005   7E00         MOV       R6,#0x0
+     77              uint8_t receData = 0;   
+   \   000007   75..00       MOV       ?V0,#0x0
+     78              
+     79              for (tempVar = 0;tempVar < 8;tempVar ++)
+     80              {  
+     81                  
+     82                  while (DHT11 == 0);   //等待低电平过去
+   \                     ??Dht11_ReceOneByte_0:
+   \   00000A   A284         MOV       C,0x80.4
+   \   00000C   50FC         JNC       ??Dht11_ReceOneByte_0
+     83                  delayUs(40);   
+   \   00000E                ; Setup parameters for call to function delayUs
+   \   00000E   7A28         MOV       R2,#0x28
+   \   000010   7B00         MOV       R3,#0x0
+   \   000012   12....       LCALL     `??delayUs::?relay`; Banked call to: delayUs
+     84                  
+     85                  
+     86                  if (DHT11 == 1)
+   \   000015   A284         MOV       C,0x80.4
+   \   000017   5019         JNC       ??Dht11_ReceOneByte_1
+     87                  {
+     88                     while (DHT11 == 1);
+   \                     ??Dht11_ReceOneByte_2:
+   \   000019   A284         MOV       C,0x80.4
+   \   00001B   40FC         JC        ??Dht11_ReceOneByte_2
+     89                      receData |= (uint8_t)(0x01<<(7-tempVar));   
+   \   00001D   75..01       MOV       ?V2,#0x1
+   \   000020   75..00       MOV       ?V3,#0x0
+   \   000023   7407         MOV       A,#0x7
+   \   000025   C3           CLR       C
+   \   000026   9E           SUBB      A,R6
+   \   000027   78..         MOV       R0,#?V2
+   \   000029   12....       LCALL     ?S_SHL
+   \   00002C   E5..         MOV       A,?V2
+   \   00002E   42..         ORL       ?V0,A
+   \   000030   8014         SJMP      ??Dht11_ReceOneByte_3
+     90                  }
+     91                  else
+     92                  {
+     93                      receData &= (uint8_t)~(0x01<<(7-tempVar));   
+   \                     ??Dht11_ReceOneByte_1:
+   \   000032   75..01       MOV       ?V2,#0x1
+   \   000035   75..00       MOV       ?V3,#0x0
+   \   000038   7407         MOV       A,#0x7
+   \   00003A   C3           CLR       C
+   \   00003B   9E           SUBB      A,R6
+   \   00003C   78..         MOV       R0,#?V2
+   \   00003E   12....       LCALL     ?S_SHL
+   \   000041   E5..         MOV       A,?V2
+   \   000043   F4           CPL       A
+   \   000044   52..         ANL       ?V0,A
+     94                  }
+     95              }
+   \                     ??Dht11_ReceOneByte_3:
+   \   000046   0E           INC       R6
+   \   000047   EE           MOV       A,R6
+   \   000048   C3           CLR       C
+   \   000049   9408         SUBB      A,#0x8
+   \   00004B   40BD         JC        ??Dht11_ReceOneByte_0
+     96              return receData;
+   \   00004D   A9..         MOV       R1,?V0
+   \   00004F   7F04         MOV       R7,#0x4
+   \   000051   02....       LJMP      ?BANKED_LEAVE_XDATA
+   \   000054                REQUIRE _A_P0
+     97          }
+     98          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     99          uint8_t Dht11_GetData (double *temp, double *humi)
+   \                     Dht11_GetData:
+    100          {
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000                REQUIRE ?V6
+   \   000000                REQUIRE ?V7
+   \   000000                REQUIRE ?V8
+   \   000000                REQUIRE ?V9
+   \   000000                REQUIRE ?V10
+   \   000000                REQUIRE ?V11
+   \   000000   74EC         MOV       A,#-0x14
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 20
+   \   000005                ; Auto size: 20
+   \   000005   74EC         MOV       A,#-0x14
+   \   000007   12....       LCALL     ?ALLOC_XSTACK8
+   \   00000A   EA           MOV       A,R2
+   \   00000B   FE           MOV       R6,A
+   \   00000C   EB           MOV       A,R3
+   \   00000D   FF           MOV       R7,A
+   \   00000E   8C..         MOV       ?V0,R4
+   \   000010   8D..         MOV       ?V1,R5
+    101            double buf[5]={0};
+   \   000012   90....       MOV       DPTR,#`?<Constant {(0.0)}>`
+   \   000015   AC..         MOV       R4,?XSP + 0
+   \   000017   AD..         MOV       R5,?XSP + 1
+   \   000019   7414         MOV       A,#0x14
+   \   00001B   12....       LCALL     ?MOVE_LONG8_XDATA_XDATA
+    102              uint8_t i;
+    103              dht11_start();   // 复位
+   \   00001E                ; Setup parameters for call to function dht11_start
+   \   00001E   12....       LCALL     `??dht11_start::?relay`; Banked call to: dht11_start
+    104              
+    105              if(dht11_check() == 0)
+   \   000021                ; Setup parameters for call to function dht11_check
+   \   000021   12....       LCALL     `??dht11_check::?relay`; Banked call to: dht11_check
+   \   000024   8B..         MOV       ?V3,R3
+   \   000026   EA           MOV       A,R2
+   \   000027   45..         ORL       A,?V3
+   \   000029   6003         JZ        $+5
+   \   00002B   02....       LJMP      ??Dht11_GetData_0 & 0xFFFF
+    106              {
+    107                  for(i = 0; i < 5; i++) //读取40位数据
+   \   00002E   75..00       MOV       ?V2,#0x0
+    108                  {
+    109                      buf[i] = Dht11_ReceOneByte();
+   \                     ??Dht11_GetData_1:
+   \   000031                ; Setup parameters for call to function Dht11_ReceOneByte
+   \   000031   12....       LCALL     `??Dht11_ReceOneByte::?relay`; Banked call to: Dht11_ReceOneByte
+   \   000034   E9           MOV       A,R1
+   \   000035   F5..         MOV       ?V4,A
+   \   000037   E4           CLR       A
+   \   000038   F5..         MOV       ?V5,A
+   \   00003A   F5..         MOV       ?V6,A
+   \   00003C   F5..         MOV       ?V7,A
+   \   00003E   78..         MOV       R0,#?V4
+   \   000040   12....       LCALL     ?UL_TO_FLT
+   \   000043   E5..         MOV       A,?V2
+   \   000045   F5..         MOV       ?V8,A
+   \   000047   75..00       MOV       ?V9,#0x0
+   \   00004A   7402         MOV       A,#0x2
+   \   00004C   78..         MOV       R0,#?V8
+   \   00004E   12....       LCALL     ?S_SHL
+   \   000051   85..82       MOV       DPL,?XSP + 0
+   \   000054   85..83       MOV       DPH,?XSP + 1
+   \   000057   E582         MOV       A,DPL
+   \   000059   25..         ADD       A,?V8
+   \   00005B   F582         MOV       DPL,A
+   \   00005D   E583         MOV       A,DPH
+   \   00005F   35..         ADDC      A,?V9
+   \   000061   F583         MOV       DPH,A
+   \   000063   78..         MOV       R0,#?V4
+   \   000065   12....       LCALL     ?L_MOV_TO_X
+    110                  }
+   \   000068   05..         INC       ?V2
+   \   00006A   E5..         MOV       A,?V2
+   \   00006C   C3           CLR       C
+   \   00006D   9405         SUBB      A,#0x5
+   \   00006F   40C0         JC        ??Dht11_GetData_1
+    111          	
+    112                  if(buf[0]!=0){
+   \   000071   85..82       MOV       DPL,?XSP + 0
+   \   000074   85..83       MOV       DPH,?XSP + 1
+   \   000077   78..         MOV       R0,#?V4
+   \   000079   12....       LCALL     ?L_MOV_X
+   \   00007C   90....       MOV       DPTR,#__Constant_0
+   \   00007F   78..         MOV       R0,#?V8
+   \   000081   12....       LCALL     ?L_MOV_X
+   \   000084   78..         MOV       R0,#?V4
+   \   000086   79..         MOV       R1,#?V8
+   \   000088   12....       LCALL     ?FLT_EQ
+   \   00008B   6007         JZ        ??Dht11_GetData_2
+    113                   printf("success\n");
+   \   00008D                ; Setup parameters for call to function printf
+   \   00008D   7A..         MOV       R2,#`?<Constant "success\\n">` & 0xff
+   \   00008F   7B..         MOV       R3,#(`?<Constant "success\\n">` >> 8) & 0xff
+   \   000091   12....       LCALL     `??printf::?relay`; Banked call to: printf
+    114                    }
+    115                  
+    116                  if((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])
+   \                     ??Dht11_GetData_2:
+   \   000094   85..82       MOV       DPL,?XSP + 0
+   \   000097   85..83       MOV       DPH,?XSP + 1
+   \   00009A   78..         MOV       R0,#?V4
+   \   00009C   12....       LCALL     ?L_MOV_X
+   \   00009F   7404         MOV       A,#0x4
+   \   0000A1   12....       LCALL     ?XSTACK_DISP0_8
+   \   0000A4   78..         MOV       R0,#?V8
+   \   0000A6   12....       LCALL     ?L_MOV_X
+   \   0000A9   78..         MOV       R0,#?V4
+   \   0000AB   79..         MOV       R1,#?V8
+   \   0000AD   12....       LCALL     ?FLT_ADD
+   \   0000B0   7408         MOV       A,#0x8
+   \   0000B2   12....       LCALL     ?XSTACK_DISP0_8
+   \   0000B5   78..         MOV       R0,#?V8
+   \   0000B7   12....       LCALL     ?L_MOV_X
+   \   0000BA   78..         MOV       R0,#?V4
+   \   0000BC   79..         MOV       R1,#?V8
+   \   0000BE   12....       LCALL     ?FLT_ADD
+   \   0000C1   740C         MOV       A,#0xc
+   \   0000C3   12....       LCALL     ?XSTACK_DISP0_8
+   \   0000C6   78..         MOV       R0,#?V8
+   \   0000C8   12....       LCALL     ?L_MOV_X
+   \   0000CB   78..         MOV       R0,#?V4
+   \   0000CD   79..         MOV       R1,#?V8
+   \   0000CF   12....       LCALL     ?FLT_ADD
+   \   0000D2   7410         MOV       A,#0x10
+   \   0000D4   12....       LCALL     ?XSTACK_DISP0_8
+   \   0000D7   78..         MOV       R0,#?V8
+   \   0000D9   12....       LCALL     ?L_MOV_X
+   \   0000DC   78..         MOV       R0,#?V4
+   \   0000DE   79..         MOV       R1,#?V8
+   \   0000E0   12....       LCALL     ?FLT_EQ
+   \   0000E3   7069         JNZ       ??Dht11_GetData_3
+    117                  {
+    118                      *humi = buf[0]+buf[1]/10.00;
+   \   0000E5   7404         MOV       A,#0x4
+   \   0000E7   12....       LCALL     ?XSTACK_DISP0_8
+   \   0000EA   78..         MOV       R0,#?V4
+   \   0000EC   12....       LCALL     ?L_MOV_X
+   \   0000EF   90....       MOV       DPTR,#__Constant_41200000
+   \   0000F2   78..         MOV       R0,#?V8
+   \   0000F4   12....       LCALL     ?L_MOV_X
+   \   0000F7   78..         MOV       R0,#?V4
+   \   0000F9   79..         MOV       R1,#?V8
+   \   0000FB   12....       LCALL     ?FLT_DIV
+   \   0000FE   85..82       MOV       DPL,?XSP + 0
+   \   000101   85..83       MOV       DPH,?XSP + 1
+   \   000104   78..         MOV       R0,#?V8
+   \   000106   12....       LCALL     ?L_MOV_X
+   \   000109   78..         MOV       R0,#?V4
+   \   00010B   79..         MOV       R1,#?V8
+   \   00010D   12....       LCALL     ?FLT_ADD
+   \   000110   85..82       MOV       DPL,?V0
+   \   000113   85..83       MOV       DPH,?V1
+   \   000116   78..         MOV       R0,#?V4
+   \   000118   12....       LCALL     ?L_MOV_TO_X
+    119                      *temp = buf[2]+buf[3]/10.00;
+   \   00011B   740C         MOV       A,#0xc
+   \   00011D   12....       LCALL     ?XSTACK_DISP0_8
+   \   000120   78..         MOV       R0,#?V0
+   \   000122   12....       LCALL     ?L_MOV_X
+   \   000125   90....       MOV       DPTR,#__Constant_41200000
+   \   000128   78..         MOV       R0,#?V4
+   \   00012A   12....       LCALL     ?L_MOV_X
+   \   00012D   78..         MOV       R0,#?V0
+   \   00012F   79..         MOV       R1,#?V4
+   \   000131   12....       LCALL     ?FLT_DIV
+   \   000134   7408         MOV       A,#0x8
+   \   000136   12....       LCALL     ?XSTACK_DISP0_8
+   \   000139   78..         MOV       R0,#?V4
+   \   00013B   12....       LCALL     ?L_MOV_X
+   \   00013E   78..         MOV       R0,#?V0
+   \   000140   79..         MOV       R1,#?V4
+   \   000142   12....       LCALL     ?FLT_ADD
+   \   000145   8E82         MOV       DPL,R6
+   \   000147   8F83         MOV       DPH,R7
+   \   000149   78..         MOV       R0,#?V0
+   \   00014B   12....       LCALL     ?L_MOV_TO_X
+    120                  }
+    121              }
+    122              else
+    123                  {
+    124                      return 1;
+    125                  }
+    126              return 0;
+   \                     ??Dht11_GetData_3:
+   \   00014E   7900         MOV       R1,#0x0
+   \   000150   8002         SJMP      ??Dht11_GetData_4
+   \                     ??Dht11_GetData_0:
+   \   000152   7901         MOV       R1,#0x1
+   \                     ??Dht11_GetData_4:
+   \   000154   7414         MOV       A,#0x14
+   \   000156   12....       LCALL     ?DEALLOC_XSTACK8
+   \   000159   7F0C         MOV       R7,#0xc
+   \   00015B   02....       LJMP      ?BANKED_LEAVE_XDATA
+    127          }
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {(0.0)}>`:
+   \   000000   00000000     DD 0H
+   \   000004   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+   \   00000C   00000000     DB 0, 0, 0, 0, 0, 0, 0, 0
+   \            00000000
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??delayUs::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delayUs
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??delayMs::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delayMs
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??GPIO_OUT_Init::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GPIO_OUT_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??GPIO_IN_Init::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GPIO_IN_Init
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??dht11_start::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    dht11_start
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??dht11_check::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    dht11_check
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??Dht11_ReceOneByte::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Dht11_ReceOneByte
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??Dht11_GetData::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    Dht11_GetData
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant "success\\n">`:
+   \   000000   73756363     DB "success\012"
+   \            6573730A
+   \            00      
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_0:
+   \   000000   00000000     DD 0H
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_41200000:
+   \   000000   00002041     DD 41200000H
+    128          
+    129          
+    130          
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      0     40   Dht11_GetData
+        0     40   -> Dht11_ReceOneByte
+        0     40   -> dht11_check
+        0     40   -> dht11_start
+        0     40   -> printf
+      0     52   Dht11_ReceOneByte
+        0     12   -> delayUs
+      0      9   GPIO_IN_Init
+      0      0   GPIO_OUT_Init
+      0      9   delayMs
+        0      9   -> delayUs
+      0     12   delayUs
+      0     49   dht11_check
+        0      9   -> GPIO_IN_Init
+        0      9   -> delayUs
+      2     40   dht11_start
+        2      0   -> GPIO_OUT_Init
+        2      0   -> delayMs
+        2      0   -> delayUs
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       9  ?<Constant "success\n">
+      20  ?<Constant {(0.0)}>
+       5  ?Subroutine0
+     350  Dht11_GetData
+       6  Dht11_GetData::?relay
+      84  Dht11_ReceOneByte
+       6  Dht11_ReceOneByte::?relay
+       9  GPIO_IN_Init
+       6  GPIO_IN_Init::?relay
+      11  GPIO_OUT_Init
+       6  GPIO_OUT_Init::?relay
+       1  P0DIR
+       1  P0SEL
+       1  _A_P0
+       4  __Constant_0
+       4  __Constant_41200000
+      34  delayMs
+       6  delayMs::?relay
+      24  delayUs
+       6  delayUs::?relay
+      75  dht11_check
+       6  dht11_check::?relay
+      32  dht11_start
+       6  dht11_start::?relay
+
+ 
+ 624 bytes in segment BANKED_CODE
+  48 bytes in segment BANK_RELAYS
+   3 bytes in segment SFR_AN
+  37 bytes in segment XDATA_ROM_C
+ 
+  48 bytes of CODE     memory
+  29 bytes of CONST    memory (+ 8 bytes shared)
+   0 bytes of DATA     memory (+ 3 bytes shared)
+ 624 bytes of HUGECODE memory
+
+Errors: none
+Warnings: none

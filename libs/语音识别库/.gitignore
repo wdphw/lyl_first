@@ -1,0 +1,73 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+build
+.vscode
+.config
+.config.old
+
+
+# python
+*.pyc
+__pycache__
+
+
+# special
+
+assets/test_files/AM/
+assets/test_files/am_7332/
+assets/test_files/lmM/
+assets/test_files/**/*.sfst
+assets/test_files/**/*.sym
+assets/test_files/**/*.bin
+assets/test_files/**/*.sm

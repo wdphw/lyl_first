@@ -1,0 +1,25 @@
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'D:\keil5\ARM\ARMCC\Bin'
+Build target 'Smart_Home'
+compiling freertos_task.c...
+..\Core\Src\freertos_task.c(133): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rbuf, "A%d", &air_flag);
+..\Core\Src\freertos_task.c(145): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rbuf, "W%d", &w_flag);
+..\Core\Src\freertos_task.c(157): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rbuf, "L%d", &led_flag);
+..\Core\Src\freertos_task.c(174): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rbuf, "B%d", &beep_flag);
+..\Core\Src\freertos_task.c(200): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rrbuf, "A%d", &air_flag);
+..\Core\Src\freertos_task.c(212): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rrbuf, "W%d", &w_flag);
+..\Core\Src\freertos_task.c(224): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rrbuf, "L%d", &led_flag);
+..\Core\Src\freertos_task.c(241): warning:  #181-D: argument is incompatible with corresponding format string conversion
+              sscanf((char *)rrbuf, "B%d", &beep_flag);
+..\Core\Src\freertos_task.c: 8 warnings, 0 errors
+linking...
+Program Size: Code=18560 RO-data=540 RW-data=136 ZI-data=19112  
+FromELF: creating hex file...
+"Smart_Home\Smart_Home.axf" - 0 Error(s), 8 Warning(s).
+Build Time Elapsed:  00:00:03

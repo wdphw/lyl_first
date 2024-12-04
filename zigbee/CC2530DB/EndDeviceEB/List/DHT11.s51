@@ -1,0 +1,1213 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V10.10.1.4655 for 8051              18/Nov/2024  01:44:41
+// Copyright 2004-2017 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\DHT11.C
+//    Command line       =  
+//        -f C:\Users\lyl\AppData\Local\Temp\EW5698.tmp
+//        (C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\DHT11.C
+//        -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC
+//        -D LCD_SUPPORTED=DEBUG -D HAL_UART=TRUE -D INT_HEAP_LEN=2048 -lC
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\List
+//        -lA
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\List
+//        --diag_suppress Pe001,Pa010 -o
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\Obj
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 16 -f
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_TX_DATA_MAX=3
+//        -DMAC_CFG_TX_MAX=6 -DMAC_CFG_RX_MAX=3) -f
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+//        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0x1345
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440) -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\Source\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+//        -Ohz --require_prototypes --no_code_motion)
+//    Locale             =  Chinese (Simplified)_China.936
+//    List file          =  
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\EndDeviceEB\List\DHT11.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME DHT11
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dlib_file_descriptor", "0"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__iar_require _Printf", ""
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__register_banks", "*"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?V0
+        EXTERN ?V2
+        EXTERN ?V3
+        EXTERN ?V1
+        EXTERN ?V4
+        EXTERN ?V5
+        EXTERN ?V6
+        EXTERN ?V7
+        EXTERN ?V8
+        EXTERN ?V9
+        EXTERN ?V10
+        EXTERN ?V11
+        EXTERN ?ALLOC_XSTACK8
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?DEALLOC_XSTACK8
+        EXTERN ?FLT_ADD
+        EXTERN ?FLT_DIV
+        EXTERN ?FLT_EQ
+        EXTERN ?L_MOV_TO_X
+        EXTERN ?L_MOV_X
+        EXTERN ?MOVE_LONG8_XDATA_XDATA
+        EXTERN ?S_SHL
+        EXTERN ?UL_TO_FLT
+        EXTERN ?XSP
+        EXTERN ?XSTACK_DISP0_8
+
+        PUBLIC `??Dht11_GetData::?relay`
+        FUNCTION `??Dht11_GetData::?relay`,0203H
+        PUBLIC `??Dht11_ReceOneByte::?relay`
+        FUNCTION `??Dht11_ReceOneByte::?relay`,0203H
+        PUBLIC `??GPIO_IN_Init::?relay`
+        FUNCTION `??GPIO_IN_Init::?relay`,0203H
+        PUBLIC `??GPIO_OUT_Init::?relay`
+        FUNCTION `??GPIO_OUT_Init::?relay`,0203H
+        PUBLIC `??delayMs::?relay`
+        FUNCTION `??delayMs::?relay`,0203H
+        PUBLIC `??delayUs::?relay`
+        FUNCTION `??delayUs::?relay`,0203H
+        PUBLIC `??dht11_check::?relay`
+        FUNCTION `??dht11_check::?relay`,0203H
+        PUBLIC `??dht11_start::?relay`
+        FUNCTION `??dht11_start::?relay`,0203H
+        PUBLIC Dht11_GetData
+        FUNCTION Dht11_GetData,0a1203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 40, STACK
+        PUBLIC Dht11_ReceOneByte
+        FUNCTION Dht11_ReceOneByte,0a1203H
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 12, STACK
+        PUBLIC GPIO_IN_Init
+        FUNCTION GPIO_IN_Init,0203H
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUBLIC GPIO_OUT_Init
+        FUNCTION GPIO_OUT_Init,0203H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUBWEAK P0DIR
+        PUBWEAK P0SEL
+        PUBWEAK _A_P0
+        PUBWEAK __Constant_0
+        PUBWEAK __Constant_41200000
+        PUBLIC delayMs
+        FUNCTION delayMs,021203H
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 9, STACK
+        PUBLIC delayUs
+        FUNCTION delayUs,080203H
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUBLIC dht11_check
+        FUNCTION dht11_check,021203H
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME XSTACK, 9, STACK
+        PUBLIC dht11_start
+        FUNCTION dht11_start,021203H
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        LOCFRAME ISTACK, 2, STACK
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA_SP SP IDATA
+          CFI StackFrame CFA_PSP16 PSP16 XDATA
+          CFI StackFrame CFA_XSP16 XSP16 XDATA
+          CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+          CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+          CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+          CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+          CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+          CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+          CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+          CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+          CFI Resource V8:8, V9:8, V10:8, V11:8, V12:8, V13:8, V14:8, V15:8, SP:8
+          CFI Resource PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+          CFI VirtualResource ?RET:24
+          CFI Resource ?BRET_EXT:8
+          CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+          CFI ResourceParts PSP16 PSPH, PSPL
+          CFI ResourceParts XSP16 XSPH, XSPL
+          CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-3
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B Undefined
+          CFI A Undefined
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 Undefined
+          CFI R1 Undefined
+          CFI R2 Undefined
+          CFI R3 Undefined
+          CFI R4 Undefined
+          CFI R5 Undefined
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI V8 SameValue
+          CFI V9 SameValue
+          CFI V10 SameValue
+          CFI V11 SameValue
+          CFI V12 SameValue
+          CFI V13 SameValue
+          CFI V14 SameValue
+          CFI V15 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon0
+        
+printf              SYMBOL "printf"
+`??printf::?relay`  SYMBOL "?relay", printf
+Dht11_GetData       SYMBOL "Dht11_GetData"
+`??Dht11_GetData::?relay` SYMBOL "?relay", Dht11_GetData
+Dht11_ReceOneByte   SYMBOL "Dht11_ReceOneByte"
+`??Dht11_ReceOneByte::?relay` SYMBOL "?relay", Dht11_ReceOneByte
+GPIO_IN_Init        SYMBOL "GPIO_IN_Init"
+`??GPIO_IN_Init::?relay` SYMBOL "?relay", GPIO_IN_Init
+GPIO_OUT_Init       SYMBOL "GPIO_OUT_Init"
+`??GPIO_OUT_Init::?relay` SYMBOL "?relay", GPIO_OUT_Init
+delayMs             SYMBOL "delayMs"
+`??delayMs::?relay` SYMBOL "?relay", delayMs
+delayUs             SYMBOL "delayUs"
+`??delayUs::?relay` SYMBOL "?relay", delayUs
+dht11_check         SYMBOL "dht11_check"
+`??dht11_check::?relay` SYMBOL "?relay", dht11_check
+dht11_start         SYMBOL "dht11_start"
+`??dht11_start::?relay` SYMBOL "?relay", dht11_start
+
+        EXTERN `??printf::?relay`
+        FUNCTION `??printf::?relay`,00H
+        EXTERN printf
+        FUNCTION printf,010202H
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+
+// C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\DHT11.C
+//    1 #include <ioCC2530.h>
+
+        ASEGN SFR_AN:DATA:NOROOT,080H
+// union <unnamed> volatile __sfr _A_P0
+_A_P0:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f3H
+// unsigned char volatile __sfr P0SEL
+P0SEL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0fdH
+// unsigned char volatile __sfr P0DIR
+P0DIR:
+        DATA8
+        DS 1
+//    2 #include <stdio.h>
+//    3 #include <stdint.h>
+//    4 #include "dht11.h"
+//    5 //typedef unsigned char           uint8_t;
+//    6 #define u32 unsigned int 
+//    7 
+//    8 #define DHT11 P0_4
+//    9 
+//   10 void delayUs(u32 n);
+//   11 void delayMs(u32 n);
+//   12 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   13 void delayUs(u32 n) 
+delayUs:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function delayUs
+        CODE
+//   14 { 
+        ; Saved register size: 0
+        ; Auto size: 0
+        SJMP      ??delayUs_0
+//   15   while(n--)   
+//   16   { 
+//   17     asm("NOP"); 
+??delayUs_1:
+        NOP
+//   18     asm("NOP");	
+        NOP
+//   19     asm("NOP"); 
+        NOP
+//   20   } 
+??delayUs_0:
+        MOV       A,R2
+        MOV       R0,A
+        MOV       A,R3
+        MOV       R1,A
+        MOV       A,R0
+        ADD       A,#-0x1
+        DEC       R2
+        MOV       A,R1
+        ADDC      A,#-0x1
+        MOV       R3,A
+        MOV       A,R0
+        ORL       A,R1
+        JNZ       ??delayUs_1
+//   21 } 
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock0
+//   22  
+//   23 //毫秒级延时 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   24 void delayMs(u32 n) 
+delayMs:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function delayMs
+        CODE
+//   25 { 
+        FUNCALL delayMs, delayUs
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV       A,#-0x9
+        LCALL     ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+        MOV       A,R2
+        MOV       R6,A
+        MOV       A,R3
+        MOV       R7,A
+        SJMP      ??delayMs_0
+//   26   while(n--) 
+//   27   { 
+//   28       delayUs(1000); 
+??delayMs_1:
+        ; Setup parameters for call to function delayUs
+        MOV       R2,#-0x18
+        MOV       R3,#0x3
+        LCALL     `??delayUs::?relay`; Banked call to: delayUs
+//   29   } 
+??delayMs_0:
+        MOV       A,R6
+        MOV       R0,A
+        MOV       A,R7
+        MOV       R1,A
+        MOV       A,R0
+        ADD       A,#-0x1
+        DEC       R6
+        MOV       A,R1
+        ADDC      A,#-0x1
+        MOV       R7,A
+        MOV       A,R0
+        ORL       A,R1
+        JNZ       ??delayMs_1
+//   30 }
+          CFI EndBlock cfiBlock1
+        REQUIRE ?Subroutine0
+        ; // Fall through to label ?Subroutine0
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+?Subroutine0:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI NoFunction
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+        MOV       R7,#0x1
+        LJMP      ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock2
+//   31 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   32 void GPIO_OUT_Init(void){
+GPIO_OUT_Init:
+          CFI Block cfiBlock3 Using cfiCommon0
+          CFI Function GPIO_OUT_Init
+        CODE
+        ; Saved register size: 0
+        ; Auto size: 0
+//   33   P0SEL &=~(1<<4);
+        ANL       0xf3,#0xef
+//   34   P0DIR |= (1<<4);
+        ORL       0xfd,#0x10
+//   35   DHT11 = 1;
+        SETB      0x80.4
+//   36 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock3
+        REQUIRE P0SEL
+        REQUIRE P0DIR
+        REQUIRE _A_P0
+//   37 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   38 void GPIO_IN_Init(void){
+GPIO_IN_Init:
+          CFI Block cfiBlock4 Using cfiCommon0
+          CFI Function GPIO_IN_Init
+        CODE
+        ; Saved register size: 0
+        ; Auto size: 0
+//   39    P0SEL &=~(1<<4);
+        ANL       0xf3,#0xef
+//   40    P0DIR &=~(1<<4);
+        ANL       0xfd,#0xef
+//   41 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock4
+        REQUIRE P0SEL
+        REQUIRE P0DIR
+//   42 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   43 void dht11_start(){
+dht11_start:
+          CFI Block cfiBlock5 Using cfiCommon0
+          CFI Function dht11_start
+        CODE
+        FUNCALL dht11_start, GPIO_OUT_Init
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL dht11_start, delayMs
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL dht11_start, delayUs
+        LOCFRAME ISTACK, 2, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 0, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 2, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 0, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        PUSH      DPL
+          CFI DPL0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH      DPH
+          CFI DPH0 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   44   GPIO_OUT_Init();
+        ; Setup parameters for call to function GPIO_OUT_Init
+        LCALL     `??GPIO_OUT_Init::?relay`; Banked call to: GPIO_OUT_Init
+//   45   DHT11=0;
+        CLR       0x80.4
+//   46   delayMs(20);
+        ; Setup parameters for call to function delayMs
+        MOV       R2,#0x14
+        MOV       R3,#0x0
+        LCALL     `??delayMs::?relay`; Banked call to: delayMs
+//   47   DHT11=1;
+        SETB      0x80.4
+//   48   delayUs(30);
+        ; Setup parameters for call to function delayUs
+        MOV       R2,#0x1e
+        MOV       R3,#0x0
+        LCALL     `??delayUs::?relay`; Banked call to: delayUs
+//   49 
+//   50   
+//   51 }
+        POP       DPH
+          CFI DPH0 SameValue
+          CFI CFA_SP SP+-4
+        POP       DPL
+          CFI DPL0 SameValue
+          CFI CFA_SP SP+-3
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock5
+        REQUIRE _A_P0
+//   52 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   53 int dht11_check(){
+dht11_check:
+          CFI Block cfiBlock6 Using cfiCommon0
+          CFI Function dht11_check
+        CODE
+        FUNCALL dht11_check, GPIO_IN_Init
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL dht11_check, delayUs
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL dht11_check, delayUs
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 9, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 9, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        MOV       A,#-0x9
+        LCALL     ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 9)
+        ; Saved register size: 9
+        ; Auto size: 0
+//   54   uint8_t retry=0;
+        MOV       R6,#0x0
+//   55   GPIO_IN_Init();
+        ; Setup parameters for call to function GPIO_IN_Init
+        LCALL     `??GPIO_IN_Init::?relay`; Banked call to: GPIO_IN_Init
+        SJMP      ??dht11_check_0
+//   56 	
+//   57   while((DHT11==0)&& retry<100){ 
+//   58 		retry++;
+??dht11_check_1:
+        INC       R6
+//   59                 delayUs(1);
+        ; Setup parameters for call to function delayUs
+        MOV       R2,#0x1
+        MOV       R3,#0x0
+        LCALL     `??delayUs::?relay`; Banked call to: delayUs
+//   60 	}
+??dht11_check_0:
+        MOV       C,0x80.4
+        JC        ??dht11_check_2
+        MOV       A,R6
+        CLR       C
+        SUBB      A,#0x64
+        JC        ??dht11_check_1
+//   61 	if(retry>=100)return 1; 	
+??dht11_check_2:
+        MOV       A,R6
+        CLR       C
+        SUBB      A,#0x64
+        JNC       ??dht11_check_3
+//   62 	else retry=0;
+        MOV       R6,#0x0
+        SJMP      ??dht11_check_4
+//   63 
+//   64   
+//   65   while ((DHT11==1) && retry<100) {  
+//   66         retry++;
+??dht11_check_5:
+        INC       R6
+//   67         delayUs(1);
+        ; Setup parameters for call to function delayUs
+        MOV       R2,#0x1
+        MOV       R3,#0x0
+        LCALL     `??delayUs::?relay`; Banked call to: delayUs
+//   68     }	    
+??dht11_check_4:
+        MOV       C,0x80.4
+        JNC       ??dht11_check_6
+        MOV       A,R6
+        CLR       C
+        SUBB      A,#0x64
+        JC        ??dht11_check_5
+//   69     if(retry>=100)return 1;	    
+??dht11_check_6:
+        MOV       A,R6
+        CLR       C
+        SUBB      A,#0x64
+        JC        ??dht11_check_7
+??dht11_check_3:
+        MOV       R2,#0x1
+        SJMP      ??dht11_check_8
+//   70     return 0;
+??dht11_check_7:
+        MOV       R2,#0x0
+??dht11_check_8:
+        MOV       R3,#0x0
+        LJMP      ?Subroutine0 & 0xFFFF
+          CFI EndBlock cfiBlock6
+        REQUIRE _A_P0
+//   71 
+//   72 }
+//   73 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   74 uint8_t Dht11_ReceOneByte (void)
+Dht11_ReceOneByte:
+          CFI Block cfiBlock7 Using cfiCommon0
+          CFI Function Dht11_ReceOneByte
+        CODE
+//   75 {
+        FUNCALL Dht11_ReceOneByte, delayUs
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 12, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 12, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V2
+        REQUIRE ?V3
+        MOV       A,#-0xc
+        LCALL     ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 12)
+        ; Saved register size: 12
+        ; Auto size: 0
+//   76     uint8_t tempVar = 0;   
+        MOV       R6,#0x0
+//   77     uint8_t receData = 0;   
+        MOV       ?V0,#0x0
+//   78     
+//   79     for (tempVar = 0;tempVar < 8;tempVar ++)
+//   80     {  
+//   81         
+//   82         while (DHT11 == 0);   //等待低电平过去
+??Dht11_ReceOneByte_0:
+        MOV       C,0x80.4
+        JNC       ??Dht11_ReceOneByte_0
+//   83         delayUs(40);   
+        ; Setup parameters for call to function delayUs
+        MOV       R2,#0x28
+        MOV       R3,#0x0
+        LCALL     `??delayUs::?relay`; Banked call to: delayUs
+//   84         
+//   85         
+//   86         if (DHT11 == 1)
+        MOV       C,0x80.4
+        JNC       ??Dht11_ReceOneByte_1
+//   87         {
+//   88            while (DHT11 == 1);
+??Dht11_ReceOneByte_2:
+        MOV       C,0x80.4
+        JC        ??Dht11_ReceOneByte_2
+//   89             receData |= (uint8_t)(0x01<<(7-tempVar));   
+        MOV       ?V2,#0x1
+        MOV       ?V3,#0x0
+        MOV       A,#0x7
+        CLR       C
+        SUBB      A,R6
+        MOV       R0,#?V2
+        LCALL     ?S_SHL
+        MOV       A,?V2
+        ORL       ?V0,A
+        SJMP      ??Dht11_ReceOneByte_3
+//   90         }
+//   91         else
+//   92         {
+//   93             receData &= (uint8_t)~(0x01<<(7-tempVar));   
+??Dht11_ReceOneByte_1:
+        MOV       ?V2,#0x1
+        MOV       ?V3,#0x0
+        MOV       A,#0x7
+        CLR       C
+        SUBB      A,R6
+        MOV       R0,#?V2
+        LCALL     ?S_SHL
+        MOV       A,?V2
+        CPL       A
+        ANL       ?V0,A
+//   94         }
+//   95     }
+??Dht11_ReceOneByte_3:
+        INC       R6
+        MOV       A,R6
+        CLR       C
+        SUBB      A,#0x8
+        JC        ??Dht11_ReceOneByte_0
+//   96     return receData;
+        MOV       R1,?V0
+        MOV       R7,#0x4
+        LJMP      ?BANKED_LEAVE_XDATA
+          CFI EndBlock cfiBlock7
+        REQUIRE _A_P0
+//   97 }
+//   98 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   99 uint8_t Dht11_GetData (double *temp, double *humi)
+Dht11_GetData:
+          CFI Block cfiBlock8 Using cfiCommon0
+          CFI Function Dht11_GetData
+        CODE
+//  100 {
+        FUNCALL Dht11_GetData, dht11_start
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 40, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Dht11_GetData, dht11_check
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 40, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Dht11_GetData, Dht11_ReceOneByte
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 40, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        FUNCALL Dht11_GetData, printf
+        LOCFRAME ISTACK, 0, STACK
+        LOCFRAME PSTACK, 0, STACK
+        LOCFRAME XSTACK, 40, STACK
+        LOCFRAME IOVERLAY, 0, STATIC
+        LOCFRAME DOVERLAY, 0, STATIC
+        ARGFRAME ISTACK, 0, STACK
+        ARGFRAME PSTACK, 0, STACK
+        ARGFRAME XSTACK, 40, STACK
+        ARGFRAME IOVERLAY, 0, STATIC
+        ARGFRAME DOVERLAY, 0, STATIC
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V3
+        REQUIRE ?V4
+        REQUIRE ?V5
+        REQUIRE ?V6
+        REQUIRE ?V7
+        REQUIRE ?V8
+        REQUIRE ?V9
+        REQUIRE ?V10
+        REQUIRE ?V11
+        MOV       A,#-0x14
+        LCALL     ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V11 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V10 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V9 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V8 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-15)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-17)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-18)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-19)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-20)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 20)
+        ; Saved register size: 20
+        ; Auto size: 20
+        MOV       A,#-0x14
+        LCALL     ?ALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 40)
+        MOV       A,R2
+        MOV       R6,A
+        MOV       A,R3
+        MOV       R7,A
+        MOV       ?V0,R4
+        MOV       ?V1,R5
+//  101   double buf[5]={0};
+        MOV       DPTR,#`?<Constant {(0.0)}>`
+        MOV       R4,?XSP + 0
+        MOV       R5,?XSP + 1
+        MOV       A,#0x14
+        LCALL     ?MOVE_LONG8_XDATA_XDATA
+//  102     uint8_t i;
+//  103     dht11_start();   // 复位
+        ; Setup parameters for call to function dht11_start
+        LCALL     `??dht11_start::?relay`; Banked call to: dht11_start
+//  104     
+//  105     if(dht11_check() == 0)
+        ; Setup parameters for call to function dht11_check
+        LCALL     `??dht11_check::?relay`; Banked call to: dht11_check
+        MOV       ?V3,R3
+        MOV       A,R2
+        ORL       A,?V3
+        JZ        $+5
+        LJMP      ??Dht11_GetData_0 & 0xFFFF
+//  106     {
+//  107         for(i = 0; i < 5; i++) //读取40位数据
+        MOV       ?V2,#0x0
+//  108         {
+//  109             buf[i] = Dht11_ReceOneByte();
+??Dht11_GetData_1:
+        ; Setup parameters for call to function Dht11_ReceOneByte
+        LCALL     `??Dht11_ReceOneByte::?relay`; Banked call to: Dht11_ReceOneByte
+        MOV       A,R1
+        MOV       ?V4,A
+        CLR       A
+        MOV       ?V5,A
+        MOV       ?V6,A
+        MOV       ?V7,A
+        MOV       R0,#?V4
+        LCALL     ?UL_TO_FLT
+        MOV       A,?V2
+        MOV       ?V8,A
+        MOV       ?V9,#0x0
+        MOV       A,#0x2
+        MOV       R0,#?V8
+        LCALL     ?S_SHL
+        MOV       DPL,?XSP + 0
+        MOV       DPH,?XSP + 1
+        MOV       A,DPL
+        ADD       A,?V8
+        MOV       DPL,A
+        MOV       A,DPH
+        ADDC      A,?V9
+        MOV       DPH,A
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_TO_X
+//  110         }
+        INC       ?V2
+        MOV       A,?V2
+        CLR       C
+        SUBB      A,#0x5
+        JC        ??Dht11_GetData_1
+//  111 	
+//  112         if(buf[0]!=0){
+        MOV       DPL,?XSP + 0
+        MOV       DPH,?XSP + 1
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_X
+        MOV       DPTR,#__Constant_0
+        MOV       R0,#?V8
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V4
+        MOV       R1,#?V8
+        LCALL     ?FLT_EQ
+        JZ        ??Dht11_GetData_2
+//  113          printf("success\n");
+        ; Setup parameters for call to function printf
+        MOV       R2,#`?<Constant "success\\n">` & 0xff
+        MOV       R3,#(`?<Constant "success\\n">` >> 8) & 0xff
+        LCALL     `??printf::?relay`; Banked call to: printf
+//  114           }
+//  115         
+//  116         if((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])
+??Dht11_GetData_2:
+        MOV       DPL,?XSP + 0
+        MOV       DPH,?XSP + 1
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_X
+        MOV       A,#0x4
+        LCALL     ?XSTACK_DISP0_8
+        MOV       R0,#?V8
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V4
+        MOV       R1,#?V8
+        LCALL     ?FLT_ADD
+        MOV       A,#0x8
+        LCALL     ?XSTACK_DISP0_8
+        MOV       R0,#?V8
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V4
+        MOV       R1,#?V8
+        LCALL     ?FLT_ADD
+        MOV       A,#0xc
+        LCALL     ?XSTACK_DISP0_8
+        MOV       R0,#?V8
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V4
+        MOV       R1,#?V8
+        LCALL     ?FLT_ADD
+        MOV       A,#0x10
+        LCALL     ?XSTACK_DISP0_8
+        MOV       R0,#?V8
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V4
+        MOV       R1,#?V8
+        LCALL     ?FLT_EQ
+        JNZ       ??Dht11_GetData_3
+//  117         {
+//  118             *humi = buf[0]+buf[1]/10.00;
+        MOV       A,#0x4
+        LCALL     ?XSTACK_DISP0_8
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_X
+        MOV       DPTR,#__Constant_41200000
+        MOV       R0,#?V8
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V4
+        MOV       R1,#?V8
+        LCALL     ?FLT_DIV
+        MOV       DPL,?XSP + 0
+        MOV       DPH,?XSP + 1
+        MOV       R0,#?V8
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V4
+        MOV       R1,#?V8
+        LCALL     ?FLT_ADD
+        MOV       DPL,?V0
+        MOV       DPH,?V1
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_TO_X
+//  119             *temp = buf[2]+buf[3]/10.00;
+        MOV       A,#0xc
+        LCALL     ?XSTACK_DISP0_8
+        MOV       R0,#?V0
+        LCALL     ?L_MOV_X
+        MOV       DPTR,#__Constant_41200000
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V0
+        MOV       R1,#?V4
+        LCALL     ?FLT_DIV
+        MOV       A,#0x8
+        LCALL     ?XSTACK_DISP0_8
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V0
+        MOV       R1,#?V4
+        LCALL     ?FLT_ADD
+        MOV       DPL,R6
+        MOV       DPH,R7
+        MOV       R0,#?V0
+        LCALL     ?L_MOV_TO_X
+//  120         }
+//  121     }
+//  122     else
+//  123         {
+//  124             return 1;
+//  125         }
+//  126     return 0;
+??Dht11_GetData_3:
+        MOV       R1,#0x0
+        SJMP      ??Dht11_GetData_4
+??Dht11_GetData_0:
+        MOV       R1,#0x1
+??Dht11_GetData_4:
+        MOV       A,#0x14
+        LCALL     ?DEALLOC_XSTACK8
+          CFI CFA_XSP16 add(XSP16, 20)
+        MOV       R7,#0xc
+        LJMP      ?BANKED_LEAVE_XDATA
+//  127 }
+          CFI EndBlock cfiBlock8
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+`?<Constant {(0.0)}>`:
+        DATA32
+        DD 0H
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+        DB 0, 0, 0, 0, 0, 0, 0, 0
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??delayUs::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    delayUs
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??delayMs::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    delayMs
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??GPIO_OUT_Init::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    GPIO_OUT_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??GPIO_IN_Init::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    GPIO_IN_Init
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??dht11_start::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    dht11_start
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??dht11_check::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    dht11_check
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??Dht11_ReceOneByte::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    Dht11_ReceOneByte
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??Dht11_GetData::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    Dht11_GetData
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA8
+`?<Constant "success\\n">`:
+        DB "success\012"
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_0:
+        DD 0H
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_41200000:
+        DD 41200000H
+
+        END
+//  128 
+//  129 
+//  130 
+// 
+// 624 bytes in segment BANKED_CODE
+//  48 bytes in segment BANK_RELAYS
+//   3 bytes in segment SFR_AN
+//  37 bytes in segment XDATA_ROM_C
+// 
+//  48 bytes of CODE     memory
+//  29 bytes of CONST    memory (+ 8 bytes shared)
+//   0 bytes of DATA     memory (+ 3 bytes shared)
+// 624 bytes of HUGECODE memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "dht11.h": "c",
+        "main.h": "c",
+        "air.h": "c",
+        "adc.h": "c",
+        "tim.h": "c",
+        "usart.h": "c",
+        "freertos_task.h": "c",
+        "dma.h": "c",
+        "freertos.h": "c"
+    }
+}

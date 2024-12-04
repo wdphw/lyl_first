@@ -1,0 +1,467 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+// IAR C/C++ Compiler V10.10.1.4655 for 8051              25/Sep/2024  17:30:04
+// Copyright 2004-2017 IAR Systems AB.
+// Standalone license - IAR Embedded Workbench for 8051
+//
+//    Core               =  plain
+//    Code model         =  banked
+//    Data model         =  large
+//    Calling convention =  xdata reentrant
+//    Constant location  =  data_rom
+//    Dptr setup         =  1,16
+//                          
+//    Source file        =  
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\adc.c
+//    Command line       =  
+//        -f C:\Users\lyl\AppData\Local\Temp\EW2CC6.tmp
+//        (C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\adc.c
+//        -D ZIGBEEPRO -D ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC
+//        -D xLCD_SUPPORTED=DEBUG -lC
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\List
+//        -lA
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\List
+//        --diag_suppress Pe001,Pa010 -o
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\Obj
+//        -e --debug --core=plain --dptr=16,1 --data_model=large
+//        --code_model=banked --calling_convention=xdata_reentrant
+//        --place_constants=data_rom --nr_virtual_regs 8 -f
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+//        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+//        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+//        -DZDO_COORDINATOR -DRTR_NWK) -f
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+//        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+//        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0x1345
+//        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+//        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+//        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+//        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+//        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+//        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+//        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+//        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+//        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+//        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+//        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+//        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+//        -DREJOIN_POLL_RATE=440) -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\Source\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mt\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\
+//        -I
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+//        -Ohz --no_code_motion)
+//    Locale             =  Chinese (Simplified)_China.936
+//    List file          =  
+//        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\List\adc.s51
+//
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME adc
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__register_banks", "*"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+        EXTERN ?V0
+        EXTERN ?V1
+        EXTERN ?V2
+        EXTERN ?V3
+        EXTERN ?V4
+        EXTERN ?V5
+        EXTERN ?V6
+        EXTERN ?V7
+        EXTERN ?BANKED_ENTER_XDATA
+        EXTERN ?BANKED_LEAVE_XDATA
+        EXTERN ?BDISPATCH
+        EXTERN ?BRET
+        EXTERN ?FLT_MUL
+        EXTERN ?L_MOV_X
+        EXTERN ?UL_TO_FLT
+        EXTERN ?US_SHR
+
+        PUBLIC `??ADC_ValueToVoltage::?relay`
+        FUNCTION `??ADC_ValueToVoltage::?relay`,0203H
+        PUBLIC `??get_adcValue::?relay`
+        FUNCTION `??get_adcValue::?relay`,0203H
+        PUBLIC `??initLightSensor::?relay`
+        FUNCTION `??initLightSensor::?relay`,0203H
+        PUBWEAK ADCCON3
+        PUBWEAK ADCH
+        PUBWEAK ADCL
+        PUBLIC ADC_ValueToVoltage
+        FUNCTION ADC_ValueToVoltage,080203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME XSTACK, 16, STACK
+        PUBWEAK APCFG
+        PUBWEAK _A_TCON
+        PUBWEAK __Constant_39d33333
+        PUBLIC get_adcValue
+        FUNCTION get_adcValue,080203H
+        ARGFRAME XSTACK, 0, STACK
+        LOCFRAME ISTACK, 2, STACK
+        PUBLIC initLightSensor
+        FUNCTION initLightSensor,0203H
+        ARGFRAME XSTACK, 0, STACK
+        
+          CFI Names cfiNames0
+          CFI StackFrame CFA_SP SP IDATA
+          CFI StackFrame CFA_PSP16 PSP16 XDATA
+          CFI StackFrame CFA_XSP16 XSP16 XDATA
+          CFI StaticOverlayFrame CFA_IOVERLAY IOVERLAY
+          CFI StaticOverlayFrame CFA_DOVERLAY DOVERLAY
+          CFI Resource `PSW.CY`:1, `B.BR0`:1, `B.BR1`:1, `B.BR2`:1, `B.BR3`:1
+          CFI Resource `B.BR4`:1, `B.BR5`:1, `B.BR6`:1, `B.BR7`:1, `VB.BR8`:1
+          CFI Resource `VB.BR9`:1, `VB.BR10`:1, `VB.BR11`:1, `VB.BR12`:1
+          CFI Resource `VB.BR13`:1, `VB.BR14`:1, `VB.BR15`:1, VB:8, B:8, A:8
+          CFI Resource PSW:8, DPL0:8, DPH0:8, R0:8, R1:8, R2:8, R3:8, R4:8, R5:8
+          CFI Resource R6:8, R7:8, V0:8, V1:8, V2:8, V3:8, V4:8, V5:8, V6:8, V7:8
+          CFI Resource SP:8, PSPH:8, PSPL:8, PSP16:16, XSPH:8, XSPL:8, XSP16:16
+          CFI VirtualResource ?RET:24
+          CFI Resource ?BRET_EXT:8
+          CFI VirtualResource ?RET_HIGH:8, ?RET_LOW:8
+          CFI ResourceParts PSP16 PSPH, PSPL
+          CFI ResourceParts XSP16 XSPH, XSPL
+          CFI ResourceParts ?RET ?BRET_EXT, ?RET_HIGH, ?RET_LOW
+          CFI EndNames cfiNames0
+        
+          CFI Common cfiCommon0 Using cfiNames0
+          CFI CodeAlign 1
+          CFI DataAlign -1
+          CFI ReturnAddress ?RET CODE
+          CFI CFA_DOVERLAY Used
+          CFI CFA_IOVERLAY Used
+          CFI CFA_SP SP+-3
+          CFI CFA_PSP16 PSP16+0
+          CFI CFA_XSP16 XSP16+0
+          CFI `PSW.CY` SameValue
+          CFI `B.BR0` SameValue
+          CFI `B.BR1` SameValue
+          CFI `B.BR2` SameValue
+          CFI `B.BR3` SameValue
+          CFI `B.BR4` SameValue
+          CFI `B.BR5` SameValue
+          CFI `B.BR6` SameValue
+          CFI `B.BR7` SameValue
+          CFI `VB.BR8` SameValue
+          CFI `VB.BR9` SameValue
+          CFI `VB.BR10` SameValue
+          CFI `VB.BR11` SameValue
+          CFI `VB.BR12` SameValue
+          CFI `VB.BR13` SameValue
+          CFI `VB.BR14` SameValue
+          CFI `VB.BR15` SameValue
+          CFI VB SameValue
+          CFI B Undefined
+          CFI A Undefined
+          CFI PSW SameValue
+          CFI DPL0 SameValue
+          CFI DPH0 SameValue
+          CFI R0 Undefined
+          CFI R1 Undefined
+          CFI R2 Undefined
+          CFI R3 Undefined
+          CFI R4 Undefined
+          CFI R5 Undefined
+          CFI R6 SameValue
+          CFI R7 SameValue
+          CFI V0 SameValue
+          CFI V1 SameValue
+          CFI V2 SameValue
+          CFI V3 SameValue
+          CFI V4 SameValue
+          CFI V5 SameValue
+          CFI V6 SameValue
+          CFI V7 SameValue
+          CFI PSPH Undefined
+          CFI PSPL Undefined
+          CFI XSPH Undefined
+          CFI XSPL Undefined
+          CFI ?RET Concat
+          CFI ?BRET_EXT Frame(CFA_SP, 3)
+          CFI ?RET_HIGH Frame(CFA_SP, 2)
+          CFI ?RET_LOW Frame(CFA_SP, 1)
+          CFI EndCommon cfiCommon0
+        
+ADC_ValueToVoltage  SYMBOL "ADC_ValueToVoltage"
+`??ADC_ValueToVoltage::?relay` SYMBOL "?relay", ADC_ValueToVoltage
+get_adcValue        SYMBOL "get_adcValue"
+`??get_adcValue::?relay` SYMBOL "?relay", get_adcValue
+initLightSensor     SYMBOL "initLightSensor"
+`??initLightSensor::?relay` SYMBOL "?relay", initLightSensor
+
+// C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\adc.c
+//    1 #include <ioCC2530.h>
+
+        ASEGN SFR_AN:DATA:NOROOT,088H
+// union <unnamed> volatile __sfr _A_TCON
+_A_TCON:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0b6H
+// unsigned char volatile __sfr ADCCON3
+ADCCON3:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0baH
+// unsigned char volatile __sfr ADCL
+ADCL:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0bbH
+// unsigned char volatile __sfr ADCH
+ADCH:
+        DATA8
+        DS 1
+
+        ASEGN SFR_AN:DATA:NOROOT,0f2H
+// unsigned char volatile __sfr APCFG
+APCFG:
+        DATA8
+        DS 1
+//    2 #include <stdint.h>
+//    3 #include "adc.h"
+//    4 
+//    5 #define ADC_REFERENCE_VOLTAGE 3.3
+//    6 #define ADC_RESOLUTION          12
+//    7 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//    8 void initLightSensor(void) 
+initLightSensor:
+          CFI Block cfiBlock0 Using cfiCommon0
+          CFI Function initLightSensor
+        CODE
+//    9 { 
+        ; Saved register size: 0
+        ; Auto size: 0
+//   10     APCFG  |= 0x01 << 5;//0.5模拟io使能 
+        ORL       0xf2,#0x20
+//   11 }
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock0
+        REQUIRE APCFG
+//   12 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   13 uint16_t get_adcValue(void) 
+get_adcValue:
+          CFI Block cfiBlock1 Using cfiCommon0
+          CFI Function get_adcValue
+        CODE
+//   14 { 
+        REQUIRE ?V0
+        REQUIRE ?V1
+        PUSH      ?V0
+          CFI V0 Frame(CFA_SP, 4)
+          CFI CFA_SP SP+-4
+        PUSH      ?V1
+          CFI V1 Frame(CFA_SP, 5)
+          CFI CFA_SP SP+-5
+        ; Saved register size: 2
+        ; Auto size: 0
+//   15     uint16_t value; 
+//   16     ADCIF = 0;   //清ADC 中断标志 
+        CLR       0x88.5
+//   17     //采用基准电压avdd5:3.3V，512采样率，通道5，启动AD转化 
+//   18     ADCCON3 = (0x80 | 0x30 | 0x05); 
+        MOV       0xb6,#-0x4b
+//   19     while ( !ADCIF ) 
+??get_adcValue_0:
+        MOV       C,0x88.5
+        JNC       ??get_adcValue_0
+//   20     { 
+//   21         ;  //等待AD转化结束 
+//   22     } 
+//   23     value = ADCL; 
+        MOV       A,0xba+0x0
+//   24     value |= (ADCH<<8); 
+//   25     return (value>>4); //12位有效数据 
+        MOV       R1,0xbb
+        MOV       ?V0,A
+        MOV       A,R1
+        MOV       ?V1,A
+        MOV       A,#0x4
+        MOV       R0,#?V0
+        LCALL     ?US_SHR
+        MOV       R2,?V0
+        MOV       R3,?V1
+        POP       ?V1
+          CFI V1 SameValue
+          CFI CFA_SP SP+-4
+        POP       ?V0
+          CFI V0 SameValue
+          CFI CFA_SP SP+-3
+        LJMP      ?BRET
+          CFI EndBlock cfiBlock1
+        REQUIRE _A_TCON
+        REQUIRE ADCCON3
+        REQUIRE ADCL
+        REQUIRE ADCH
+//   26 }
+//   27 
+
+        RSEG BANKED_CODE:HUGECODE:NOROOT(0)
+//   28 float ADC_ValueToVoltage(uint32_t adcValue) 
+ADC_ValueToVoltage:
+          CFI Block cfiBlock2 Using cfiCommon0
+          CFI Function ADC_ValueToVoltage
+        CODE
+//   29 {  
+        REQUIRE ?V0
+        REQUIRE ?V1
+        REQUIRE ?V2
+        REQUIRE ?V3
+        REQUIRE ?V4
+        REQUIRE ?V5
+        REQUIRE ?V6
+        REQUIRE ?V7
+        MOV       A,#-0x10
+        LCALL     ?BANKED_ENTER_XDATA
+          CFI DPH0 load(1, XDATA, add(CFA_XSP16, literal(-1)))
+          CFI DPL0 load(1, XDATA, add(CFA_XSP16, literal(-2)))
+          CFI ?BRET_EXT load(1, XDATA, add(CFA_XSP16, literal(-3)))
+          CFI ?RET_HIGH load(1, XDATA, add(CFA_XSP16, literal(-4)))
+          CFI ?RET_LOW load(1, XDATA, add(CFA_XSP16, literal(-5)))
+          CFI R7 load(1, XDATA, add(CFA_XSP16, literal(-6)))
+          CFI V7 load(1, XDATA, add(CFA_XSP16, literal(-7)))
+          CFI V6 load(1, XDATA, add(CFA_XSP16, literal(-8)))
+          CFI V5 load(1, XDATA, add(CFA_XSP16, literal(-9)))
+          CFI V4 load(1, XDATA, add(CFA_XSP16, literal(-10)))
+          CFI V3 load(1, XDATA, add(CFA_XSP16, literal(-11)))
+          CFI V2 load(1, XDATA, add(CFA_XSP16, literal(-12)))
+          CFI V1 load(1, XDATA, add(CFA_XSP16, literal(-13)))
+          CFI V0 load(1, XDATA, add(CFA_XSP16, literal(-14)))
+          CFI VB load(1, XDATA, add(CFA_XSP16, literal(-15)))
+          CFI R6 load(1, XDATA, add(CFA_XSP16, literal(-16)))
+          CFI CFA_SP SP+0
+          CFI CFA_XSP16 add(XSP16, 16)
+        ; Saved register size: 16
+        ; Auto size: 0
+        MOV       ?V0,R2
+        MOV       ?V1,R3
+        MOV       ?V2,R4
+        MOV       ?V3,R5
+//   30     
+//   31   // 计算每个ADC单位的电压值  
+//   32    
+//   33   float voltagePerUnit = (float)ADC_REFERENCE_VOLTAGE / (1 << (ADC_RESOLUTION+1));  
+//   34   // 计算总电压  
+//   35    
+//   36   float voltage = adcValue * voltagePerUnit;  
+//   37    
+//   38   // 返回电压值（单位：mV）  
+//   39    
+//   40   return voltage;  
+        MOV       R0,#?V0
+        LCALL     ?UL_TO_FLT
+        MOV       DPTR,#__Constant_39d33333
+        MOV       R0,#?V4
+        LCALL     ?L_MOV_X
+        MOV       R0,#?V0
+        MOV       R1,#?V4
+        LCALL     ?FLT_MUL
+        MOV       R2,?V0
+        MOV       R3,?V1
+        MOV       R4,?V2
+        MOV       R5,?V3
+        MOV       R7,#0x8
+        LJMP      ?BANKED_LEAVE_XDATA
+//   41  
+//   42 }
+          CFI EndBlock cfiBlock2
+
+        RSEG XDATA_ROM_C:CONST:REORDER:NOROOT(0)
+        DATA32
+__Constant_39d33333:
+        DD 39D33333H
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??initLightSensor::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    initLightSensor
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??get_adcValue::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    get_adcValue
+
+        RSEG BANK_RELAYS:CODE:REORDER:NOROOT(0)
+`??ADC_ValueToVoltage::?relay`:
+        CODE
+        LCALL   ?BDISPATCH
+        DATA24
+        DC24    ADC_ValueToVoltage
+
+        END
+// 
+// 92 bytes in segment BANKED_CODE
+// 18 bytes in segment BANK_RELAYS
+//  5 bytes in segment SFR_AN
+//  4 bytes in segment XDATA_ROM_C
+// 
+// 18 bytes of CODE     memory
+//  0 bytes of CONST    memory (+ 4 bytes shared)
+//  0 bytes of DATA     memory (+ 5 bytes shared)
+// 92 bytes of HUGECODE memory
+//
+//Errors: none
+//Warnings: none

@@ -1,0 +1,297 @@
+###############################################################################
+#
+# IAR C/C++ Compiler V10.10.1.4655 for 8051               25/Sep/2024  17:30:04
+# Copyright 2004-2017 IAR Systems AB.
+# Standalone license - IAR Embedded Workbench for 8051
+#
+#    Core               =  plain
+#    Code model         =  banked
+#    Data model         =  large
+#    Calling convention =  xdata reentrant
+#    Constant location  =  data_rom
+#    Dptr setup         =  1,16
+#                          
+#    Source file        =  
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\adc.c
+#    Command line       =  
+#        -f C:\Users\lyl\AppData\Local\Temp\EW2CC6.tmp
+#        (C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\adc.c
+#        -D ZIGBEEPRO -D ZTOOL_P1 -D xMT_TASK -D xMT_SYS_FUNC -D xMT_ZDO_FUNC
+#        -D xLCD_SUPPORTED=DEBUG -lC
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\List
+#        -lA
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\List
+#        --diag_suppress Pe001,Pa010 -o
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\Obj
+#        -e --debug --core=plain --dptr=16,1 --data_model=large
+#        --code_model=banked --calling_convention=xdata_reentrant
+#        --place_constants=data_rom --nr_virtual_regs 8 -f
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wCoord.cfg
+#        (-DCPU32MHZ -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRUE
+#        -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8 -DMAC_CFG_RX_MAX=5
+#        -DZDO_COORDINATOR -DRTR_NWK) -f
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg
+#        (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR
+#        -DDEFAULT_CHANLIST=0x00000800 -DZDAPP_CONFIG_PAN_ID=0x1345
+#        -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MASK=0x007F
+#        -DBEACON_REQUEST_DELAY=100 -DBEACON_REQ_DELAY_MASK=0x00FF
+#        -DLINK_STATUS_JITTER_MASK=0x007F -DROUTE_EXPIRY_TIME=30
+#        -DAPSC_ACK_WAIT_DURATION_POLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7
+#        -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3
+#        -DNWK_MAX_DATA_RETRIES=2 -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9
+#        -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40 -DNWK_MAX_BINDING_ENTRIES=4
+#        -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07,
+#        0x09, 0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C,
+#        0x0D}" -DMAC_MAX_FRAME_SIZE=116 -DZDNWKMGR_MIN_TRANSMISSIONS=20
+#        "-DCONST=const __code" -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE
+#        -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100
+#        -DREJOIN_POLL_RATE=440) -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\Source\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\ZMain\TI2530DB\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\include\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\hal\target\CC2530EB\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\include\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\high_level\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mac\low_level\srf04\single_chip\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\mt\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\osal\include\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\saddr\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\services\sdata\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\af\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\nwk\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sapi\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sec\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\sys\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\stack\zdo\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\
+#        -I
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\..\Components\zmac\f8w\
+#        -Ohz --no_code_motion)
+#    Locale             =  Chinese (Simplified)_China.936
+#    List file          =  
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\List\adc.lst
+#    Object file        =  
+#        C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\CC2530DB\CoordinatorEB\Obj\adc.r51
+#
+###############################################################################
+
+C:\Users\lyl\Desktop\share\20190508基于GEC6818+Zigbee温湿度\20190508基于GEC6818+Zigbee温湿度\ZigBee\协调器\ZStack-CC2530-2.5.1a\Projects\zstack\Samples\SampleApp\Source\adc.c
+      1          #include <ioCC2530.h>
+
+   \                                 In  segment SFR_AN, at 0x88
+   \   union <unnamed> volatile __sfr _A_TCON
+   \                     _A_TCON:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb6
+   \   unsigned char volatile __sfr ADCCON3
+   \                     ADCCON3:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xba
+   \   unsigned char volatile __sfr ADCL
+   \                     ADCL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbb
+   \   unsigned char volatile __sfr ADCH
+   \                     ADCH:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf2
+   \   unsigned char volatile __sfr APCFG
+   \                     APCFG:
+   \   000000                DS 1
+      2          #include <stdint.h>
+      3          #include "adc.h"
+      4          
+      5          #define ADC_REFERENCE_VOLTAGE 3.3
+      6          #define ADC_RESOLUTION          12
+      7          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+      8          void initLightSensor(void) 
+   \                     initLightSensor:
+      9          { 
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     10              APCFG  |= 0x01 << 5;//0.5模拟io使能 
+   \   000000   43F220       ORL       0xf2,#0x20
+     11          }
+   \   000003   02....       LJMP      ?BRET
+   \   000006                REQUIRE APCFG
+     12          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     13          uint16_t get_adcValue(void) 
+   \                     get_adcValue:
+     14          { 
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000   C0..         PUSH      ?V0
+   \   000002   C0..         PUSH      ?V1
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     15              uint16_t value; 
+     16              ADCIF = 0;   //清ADC 中断标志 
+   \   000004   C28D         CLR       0x88.5
+     17              //采用基准电压avdd5:3.3V，512采样率，通道5，启动AD转化 
+     18              ADCCON3 = (0x80 | 0x30 | 0x05); 
+   \   000006   75B6B5       MOV       0xb6,#-0x4b
+     19              while ( !ADCIF ) 
+   \                     ??get_adcValue_0:
+   \   000009   A28D         MOV       C,0x88.5
+   \   00000B   50FC         JNC       ??get_adcValue_0
+     20              { 
+     21                  ;  //等待AD转化结束 
+     22              } 
+     23              value = ADCL; 
+   \   00000D   E5BA         MOV       A,0xba+0x0
+     24              value |= (ADCH<<8); 
+     25              return (value>>4); //12位有效数据 
+   \   00000F   A9BB         MOV       R1,0xbb
+   \   000011   F5..         MOV       ?V0,A
+   \   000013   E9           MOV       A,R1
+   \   000014   F5..         MOV       ?V1,A
+   \   000016   7404         MOV       A,#0x4
+   \   000018   78..         MOV       R0,#?V0
+   \   00001A   12....       LCALL     ?US_SHR
+   \   00001D   AA..         MOV       R2,?V0
+   \   00001F   AB..         MOV       R3,?V1
+   \   000021   D0..         POP       ?V1
+   \   000023   D0..         POP       ?V0
+   \   000025   02....       LJMP      ?BRET
+   \   000028                REQUIRE _A_TCON
+   \   000028                REQUIRE ADCCON3
+   \   000028                REQUIRE ADCL
+   \   000028                REQUIRE ADCH
+     26          }
+     27          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     28          float ADC_ValueToVoltage(uint32_t adcValue) 
+   \                     ADC_ValueToVoltage:
+     29          {  
+   \   000000                REQUIRE ?V0
+   \   000000                REQUIRE ?V1
+   \   000000                REQUIRE ?V2
+   \   000000                REQUIRE ?V3
+   \   000000                REQUIRE ?V4
+   \   000000                REQUIRE ?V5
+   \   000000                REQUIRE ?V6
+   \   000000                REQUIRE ?V7
+   \   000000   74F0         MOV       A,#-0x10
+   \   000002   12....       LCALL     ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 16
+   \   000005                ; Auto size: 0
+   \   000005   8A..         MOV       ?V0,R2
+   \   000007   8B..         MOV       ?V1,R3
+   \   000009   8C..         MOV       ?V2,R4
+   \   00000B   8D..         MOV       ?V3,R5
+     30              
+     31            // 计算每个ADC单位的电压值  
+     32             
+     33            float voltagePerUnit = (float)ADC_REFERENCE_VOLTAGE / (1 << (ADC_RESOLUTION+1));  
+     34            // 计算总电压  
+     35             
+     36            float voltage = adcValue * voltagePerUnit;  
+     37             
+     38            // 返回电压值（单位：mV）  
+     39             
+     40            return voltage;  
+   \   00000D   78..         MOV       R0,#?V0
+   \   00000F   12....       LCALL     ?UL_TO_FLT
+   \   000012   90....       MOV       DPTR,#__Constant_39d33333
+   \   000015   78..         MOV       R0,#?V4
+   \   000017   12....       LCALL     ?L_MOV_X
+   \   00001A   78..         MOV       R0,#?V0
+   \   00001C   79..         MOV       R1,#?V4
+   \   00001E   12....       LCALL     ?FLT_MUL
+   \   000021   AA..         MOV       R2,?V0
+   \   000023   AB..         MOV       R3,?V1
+   \   000025   AC..         MOV       R4,?V2
+   \   000027   AD..         MOV       R5,?V3
+   \   000029   7F08         MOV       R7,#0x8
+   \   00002B   02....       LJMP      ?BANKED_LEAVE_XDATA
+     41           
+     42          }
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_39d33333:
+   \   000000   3333D339     DD 39D33333H
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??initLightSensor::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    initLightSensor
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??get_adcValue::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    get_adcValue
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     `??ADC_ValueToVoltage::?relay`:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    ADC_ValueToVoltage
+
+   Maximum stack usage in bytes:
+
+   ISTACK XSTACK Function
+   ------ ------ --------
+      0     16   ADC_ValueToVoltage
+      2      0   get_adcValue
+      0      0   initLightSensor
+
+
+   Segment part sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       1  ADCCON3
+       1  ADCH
+       1  ADCL
+      46  ADC_ValueToVoltage
+       6  ADC_ValueToVoltage::?relay
+       1  APCFG
+       1  _A_TCON
+       4  __Constant_39d33333
+      40  get_adcValue
+       6  get_adcValue::?relay
+       6  initLightSensor
+       6  initLightSensor::?relay
+
+ 
+ 92 bytes in segment BANKED_CODE
+ 18 bytes in segment BANK_RELAYS
+  5 bytes in segment SFR_AN
+  4 bytes in segment XDATA_ROM_C
+ 
+ 18 bytes of CODE     memory
+  0 bytes of CONST    memory (+ 4 bytes shared)
+  0 bytes of DATA     memory (+ 5 bytes shared)
+ 92 bytes of HUGECODE memory
+
+Errors: none
+Warnings: none

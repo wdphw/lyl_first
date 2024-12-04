@@ -1,0 +1,25 @@
+CMakeFiles/lyl_project.dir/page/page_manager.c.o: \
+ /mnt/hgfs/lv_v9.0/page/page_manager.c \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/stdc-predef.h \
+ /mnt/hgfs/lv_v9.0/include/page_manager.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/pthread.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/features.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/sys/cdefs.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/wordsize.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/gnu/stubs-soft.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/endian.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/endian.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/types.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/typesizes.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/byteswap-16.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/sched.h \
+ /usr/local/5.4.0/lib/gcc/arm-none-linux-gnueabi/5.4.0/include/stddef.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/time.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/sched.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/time.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/xlocale.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/pthreadtypes.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/bits/setjmp.h \
+ /usr/local/5.4.0/arm-none-linux-gnueabi/sysroot/usr/include/string.h
